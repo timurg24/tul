@@ -1,4 +1,11 @@
 #pragma once
+
+/**
+ * FileOps
+ * Handles files
+ */
+
+// std
 #include <string>
 #include <filesystem>
 

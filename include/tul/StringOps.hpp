@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * StringOps
+ * Manages strings
+ */
+
 // std
 #include <string>
 #include <vector>

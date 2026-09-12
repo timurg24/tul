@@ -1,9 +1,9 @@
 #pragma once
 
-/*
-    Error
-    Handles errors
-*/
+/**
+ * ErrorOps
+ * Provides error logging functions
+ */
 
 // std
 #include <string>

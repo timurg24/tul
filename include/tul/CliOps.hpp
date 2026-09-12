@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * CliOps
+ * Provides command line argument interfaces
+ */
+
 // std
 #include <string>
 #include <vector>
