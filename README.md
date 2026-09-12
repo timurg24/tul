@@ -19,10 +19,17 @@ A set of helper functions that eliminate the need to rewrite some common functio
 
 ## CliOps
 
-Provides an easy interface to get command line arguments
+Provides an easy interface to get command line arguments.
 
 - `SetupArguments` - Sets up the arguments to be used by other functions
 - `CheckArgument` - Checks if argument exists, then returns index if it does
 - `GetArgument` - Returns the string argument at index
 - `GetValue` - Keys a value based on a key
   - Example: `--language=english`, key "language" will return value "english"
+
+## DesktopOps
+
+Provides an easy interface for cross-platform desktop actions.
+
+- `OpenExternal` - Opens a destination in it's default app
+  - Example: `https://test.com` will open in the browser and `test.txt` will open a notepad application
