@@ -4,7 +4,7 @@ A set of helper functions that eliminate the need to rewrite some common functio
 
 ## ErrorOps
 
-Check the `ErrorOps.hpp` file for colors and escape code defines.
+Check the `ErrorOps.hpp` file for color and escape code defines.
 
 - `Print` - Prints out a message
 - `Alert` - Displays a message box (<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows11/windows11-original.svg" width="16" height="16" /> only)
@@ -33,5 +33,5 @@ Provides an easy interface to get command line arguments.
 
 Provides an easy interface for cross-platform desktop actions.
 
-- `OpenExternal` - Opens a destination in it's default app
+- `OpenExternal` - Opens a destination in its default app
   - Example: `https://test.com` will open in the browser and `test.txt` will open a notepad application
