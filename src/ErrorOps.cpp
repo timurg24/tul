@@ -23,10 +23,14 @@ void tul::Print(const std::vector<std::string> &message)
 void tul::Alert(const std::vector<std::string> &message)
 {
     #ifdef TUL_WIN
-    const char* buffer = std::string(message.begin(), message.end()).c_str();
+    std::string buffer;
+    for (const std::string& line : message)
+    {
+        buffer += line;
+    }
     MessageBoxA(
         nullptr,
-        buffer,
+        buffer.c_str(),
         "ALERT",
         MB_OK | MB_ICONEXCLAMATION
     );
@@ -43,11 +47,15 @@ void tul::Alert(const std::vector<std::string> &message)
 void tul::FatalError(const std::vector<std::string> &message)
 {
     #ifdef TUL_WIN
-    const char* buffer = std::string(message.begin(), message.end()).c_str();
+    std::string buffer;
+    for (const std::string& line : message)
+    {
+        buffer += line;
+    }
     MessageBoxA(
         nullptr,
-        buffer,
-        "ALERT",
+        buffer.c_str(),
+        "FATAL ERROR",
         MB_OK | MB_ICONEXCLAMATION
     );
     #else
