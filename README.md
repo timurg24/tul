@@ -5,8 +5,8 @@ A set of helper functions that eliminate the need to rewrite some common functio
 ## ErrorOps
 
 - `Print` - Prints out a message
-- `Alert` - Prints out a red alert message
-- `FatalError` - On Windows, displays an error message box and closes the application
+- `Alert` - Displays a message (Windows only)
+- `FatalError` - Displays a message box and closes the application (Windows only)
 
 ## FileOps
 
