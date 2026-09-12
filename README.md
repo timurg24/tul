@@ -2,7 +2,7 @@
 
 A set of helper functions that eliminate the need to rewrite some common functions you might find in most programs.
 
-## Error
+## ErrorOps
 
 - `Print` - Prints out a message
 - `Alert` - Prints out a red alert message
