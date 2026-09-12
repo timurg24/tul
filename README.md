@@ -28,6 +28,7 @@ Provides an easy interface to get command line arguments.
 - `GetArgument` - Returns the string argument at index
 - `GetValue` - Keys a value based on a key
   - Example: `--language=english`, key "language" will return value "english"
+  - Example: `--preset=launch.txt`, loads a text file with each new line being added as an argument
 
 ## DesktopOps
 

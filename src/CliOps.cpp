@@ -3,6 +3,10 @@
 // std
 #include <stdexcept>
 
+// ops
+#include "tul/FileOps.hpp"
+#include "tul/StringOps.hpp"
+
 // global define
 std::vector<std::string> tul::globalArgs;
 
@@ -14,6 +18,15 @@ void tul::SetupArguments(int argc, char **argv)
     globalArgs.resize(argc);
     for(int i = 0; i < argc; ++i) {
         globalArgs[i] = argv[i];
+    }
+
+    if (std::string preset = GetValue("preset"); !preset.empty()) {
+        std::vector<std::string> lines = SplitString(ReadFile(preset));
+        globalArgs.insert(
+            globalArgs.end(),
+            lines.begin(),
+            lines.end()
+        );      
     }
 }
 
