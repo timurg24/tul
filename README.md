@@ -16,3 +16,11 @@ A set of helper functions that eliminate the need to rewrite some common functio
 
 - `SplitString` - Splits a string with a delimeter into a vector of strings
 - `HashString` - Hashes a string into `uint32_t`
+
+## CliOps
+
+Provides an easy interface to get command line arguments
+
+- `SetupArguments` - Sets up the arguments to be used by other functions
+- `CheckArgument` - Checks if argument exists, then returns index if it does
+- `GetArgument` - Returns the string argument at index

@@ -2,6 +2,7 @@ add_library(tul STATIC
     src/StringOps.cpp
     src/FileOps.cpp
     src/Error.cpp
+    src/CliOps.cpp
 )
 
 target_include_directories(tul
