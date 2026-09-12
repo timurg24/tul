@@ -21,7 +21,7 @@ void tul::SetupArguments(int argc, char **argv)
     }
 
     if (std::string preset = GetValue("preset"); !preset.empty()) {
-        std::vector<std::string> lines = SplitString(ReadFile(preset));
+        std::vector<std::string> lines = SplitString(ReadFile(preset), '\n');
         globalArgs.insert(
             globalArgs.end(),
             lines.begin(),
