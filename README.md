@@ -1,4 +1,4 @@
-# Timur's Utility Library (tuls)
+# Timur's Utility Library (tul)
 
 A set of helper functions that eliminate the need to rewrite some common functions you might find in most programs.
 
