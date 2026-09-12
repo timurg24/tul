@@ -8,7 +8,7 @@
 // std
 #include <string>
 
-namespace utils {
+namespace tul {
     void Print(const char* fmt, ...);
     void Alert(const char* fmt, ...);
     [[noreturn]] void FatalError(const char* fmt, ...);

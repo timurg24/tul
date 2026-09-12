@@ -1,10 +1,10 @@
-#include "Utils/StringOps.hpp"
+#include "tul/StringOps.hpp"
 
 /// @brief Splits a string into a vector
 /// @param source Source string
 /// @param delimeter Delimeter character
 /// @return Vector of split text
-std::vector<std::string> utils::splitString(const std::string &source, char delimeter)
+std::vector<std::string> tul::SplitString(const std::string &source, char delimeter)
 {
     std::vector<std::string> result;
     std::string acc;
@@ -23,7 +23,7 @@ std::vector<std::string> utils::splitString(const std::string &source, char deli
 /// @brief Does FNV-1a hash to a string
 /// @param string String
 /// @return Hashed string
-uint32_t utils::hashString(const std::string &string)
+uint32_t tul::HashString(const std::string &string)
 {
     uint32_t hash = 2166136261u;
 

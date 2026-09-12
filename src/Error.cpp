@@ -1,4 +1,4 @@
-#include "Utils/Error.hpp"
+#include "tul/Error.hpp"
 
 // std
 #include <iostream>
@@ -11,7 +11,7 @@
 // windows
 #include <windows.h>
 
-void utils::Print(const char* fmt, ...) {
+void tul::Print(const char* fmt, ...) {
     char buffer[2048];
 
     va_list args;
@@ -24,7 +24,7 @@ void utils::Print(const char* fmt, ...) {
     std::cout << buffer;
 }
 
-void utils::Alert(const char* fmt, ...)
+void tul::Alert(const char* fmt, ...)
 {
     char buffer[2048];
 
@@ -46,7 +46,7 @@ void utils::Alert(const char* fmt, ...)
 }
 
 [[noreturn]]
-void utils::FatalError(const char* fmt, ...)
+void tul::FatalError(const char* fmt, ...)
 {
     char buffer[2048];
 

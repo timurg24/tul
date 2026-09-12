@@ -1,11 +1,11 @@
-#include "Utils/FileOps.hpp"
+#include "tul/FileOps.hpp"
 #include <fstream>
 #include <sstream>
 
 /// @brief Reads a text file into a string
 /// @param path Path
 /// @return Text contents
-std::string utils::readFile(const std::filesystem::path &path)
+std::string tul::ReadFile(const std::filesystem::path &path)
 {
     std::fstream file(path);
     if(!file) return "";
