@@ -1,70 +1,59 @@
-#include "tul/Error.hpp"
+#include "tul/ErrorOps.hpp"
+
+#if defined(_WIN32) || defined(_WIN64)
+    #define TUL_WIN
+    #include <windows.h>
+#endif
 
 // std
 #include <iostream>
 
-// c
-#include <cstdarg>
-#include <cstdio>
-#include <cstdlib>
-
-// windows
-#include <windows.h>
-
-void tul::Print(const char* fmt, ...) {
-    char buffer[2048];
-
-    va_list args;
-    va_start(args, fmt);
-
-    vsnprintf(buffer, sizeof(buffer), fmt, args);
-
-    va_end(args);
-
-    std::cout << buffer;
+/// @brief Prints out a simple message
+/// @param message Message
+void tul::Print(const std::vector<std::string> &message)
+{
+    for(const auto& content : message) {
+        std::cout << content;
+    }
 }
 
-void tul::Alert(const char* fmt, ...)
+/// @brief (Windows Only) Displays a message box
+/// @note On non-windows systems prints out the message as red and bold
+/// @param message Message
+void tul::Alert(const std::vector<std::string> &message)
 {
-    char buffer[2048];
-
-    va_list args;
-    va_start(args, fmt);
-
-    vsnprintf(buffer, sizeof(buffer), fmt, args);
-
-    va_end(args);
-
-#ifdef _WIN32
+    #ifdef TUL_WIN
+    const char* buffer = std::string(message.begin(), message.end()).c_str();
     MessageBoxA(
         nullptr,
         buffer,
         "ALERT",
-        MB_OK | MB_ICONERROR
+        MB_OK | MB_ICONEXCLAMATION
     );
-#endif
+    #else
+    Print({BOLD, RED});
+    Print(message);
+    Print({RESET, NEWLINE});
+    #endif
 }
 
-[[noreturn]]
-void tul::FatalError(const char* fmt, ...)
+/// @brief (Windows Only) Displays a message box and quits the application
+/// @note On non-windows systems prints out the message as red and bold
+/// @param message Message
+void tul::FatalError(const std::vector<std::string> &message)
 {
-    char buffer[2048];
-
-    va_list args;
-    va_start(args, fmt);
-
-    vsnprintf(buffer, sizeof(buffer), fmt, args);
-
-    va_end(args);
-
-#ifdef _WIN32
+    #ifdef TUL_WIN
+    const char* buffer = std::string(message.begin(), message.end()).c_str();
     MessageBoxA(
         nullptr,
         buffer,
-        "FATAL ERROR",
-        MB_OK | MB_ICONERROR
+        "ALERT",
+        MB_OK | MB_ICONEXCLAMATION
     );
-#endif
-
+    #else
+    Print({BOLD, RED});
+    Print(message);
+    Print({RESET, NEWLINE});
+    #endif
     std::exit(EXIT_FAILURE);
 }
