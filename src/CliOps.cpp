@@ -38,3 +38,17 @@ std::string tul::GetArgument(int index)
         throw std::out_of_range("Attempted to read out of bounds argument: " + std::to_string(index));
     return globalArgs[index];
 }
+
+/// @brief Keys a value based on a key (argument example: --language=english)
+/// @param key Key (without the --)
+/// @return Value (or "" when not found)
+std::string tul::GetValue(const std::string &key)
+{
+    std::string fullKey = "--" + key;
+    for(const auto& arg : globalArgs) {
+        if(arg.rfind(fullKey + "=", 0) == 0) {
+            return arg.substr(fullKey.size() + 1);
+        }
+    }
+    return "";
+}

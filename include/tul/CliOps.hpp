@@ -13,4 +13,6 @@ namespace tul {
     int CheckArgument(const std::string& name);
     std::string GetArgument(int index);
 
+    std::string GetValue(const std::string& key);
+
 }

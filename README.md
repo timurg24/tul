@@ -24,3 +24,5 @@ Provides an easy interface to get command line arguments
 - `SetupArguments` - Sets up the arguments to be used by other functions
 - `CheckArgument` - Checks if argument exists, then returns index if it does
 - `GetArgument` - Returns the string argument at index
+- `GetValue` - Keys a value based on a key
+  - Example: `--language=english`, key "language" will return value "english"
