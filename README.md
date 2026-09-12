@@ -30,7 +30,7 @@ Provides an easy interface to get command line arguments.
   - Example: `--language=english`, key "language" will return value "english"
   - Example: `--preset=launch.txt`, loads a text file with each new line being added as an argument
 
-## DesktopOps
+## DeskOps
 
 Provides an easy interface for cross-platform desktop actions.
 
