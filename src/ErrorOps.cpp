@@ -38,6 +38,8 @@ void tul::Alert(const std::vector<std::string> &message)
     Print({BOLD, RED});
     Print(message);
     Print({RESET, NEWLINE});
+    std::cout << "Press Enter to continue...";
+    std::cin.get();
     #endif
 }
 
@@ -62,6 +64,8 @@ void tul::FatalError(const std::vector<std::string> &message)
     Print({BOLD, RED});
     Print(message);
     Print({RESET, NEWLINE});
+    std::cout << "Press Enter to continue...";
+    std::cin.get();
     #endif
     std::exit(EXIT_FAILURE);
 }

@@ -1,6 +1,5 @@
 add_library(tul STATIC
     src/CliOps.cpp
-    src/DeskOps.cpp
     src/ErrorOps.cpp
     src/FileOps.cpp
     src/StringOps.cpp
