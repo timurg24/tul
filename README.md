@@ -18,6 +18,9 @@ Check the `ErrorOps.hpp` file for color and escape code defines.
 
 - `SplitString` - Splits a string with a delimeter into a vector of strings
 - `HashString` - Hashes a string into `uint32_t`
+- `SetLocalizationData` - Loads a JSON file containing locale strings (see `examples/locale.json`)
+- `SetLocale` - Sets a locale (example en-US, ru-RU)
+- `GetLocaleString` - Gets a value based on a key
 
 ## CliOps
 

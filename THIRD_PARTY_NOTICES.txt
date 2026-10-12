@@ -1,0 +1,28 @@
+THIRD-PARTY SOFTWARE NOTICES
+============================
+
+This software uses third-party libraries.
+Their respective licenses and copyrights
+are acknowledged below.
+
+
+1. nlohmann/json
+----------------
+Name: JSON for Modern C++
+Author: Niels Lohmann
+Copyright (c) 2013-2026 Niels Lohmann
+
+License: MIT License
+SPDX-License-Identifier: MIT
+
+Source:
+https://github.com/nlohmann/json
+
+License text:
+[Include the complete MIT license text
+from nlohmann/json's LICENSE.MIT file]
+
+
+============================
+END OF THIRD-PARTY NOTICES
+============================

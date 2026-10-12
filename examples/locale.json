@@ -1,0 +1,12 @@
+{
+    "en-US": {
+        "app.title": "My App",
+        "menu.start": "Start",
+        "menu.settings": "Settings"
+    },
+    "ru-RU": {
+        "app.title": "Мое приложение",
+        "menu.start": "Начать",
+        "menu.settings": "Настройки"
+    }
+}
