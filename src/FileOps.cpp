@@ -7,7 +7,7 @@
 /// @return Text contents
 std::string tul::ReadFile(const std::filesystem::path &path)
 {
-    std::fstream file(path);
+    std::ifstream file(path);
     if(!file) return "";
     std::stringstream buffer;
     buffer << file.rdbuf();

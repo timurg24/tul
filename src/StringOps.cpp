@@ -2,9 +2,9 @@
 #include "tul/FileOps.hpp"
 #include <stdexcept>
 
-json tul::localizationFile;
+tul::json tul::localizationFile;
 std::string tul::currentLocale = "";
-json tul::localeObject;
+tul::json tul::localeObject;
 
 /// @brief Splits a string into a vector
 /// @param source Source string
