@@ -1,0 +1,1 @@
+- FormatOps - A configuration file reader for JSON, TOML, INI, and XML. Possible formats: YAML, binary versions of previous formats
